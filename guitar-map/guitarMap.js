@@ -1,3 +1,9 @@
+import encounters from '../data/encounters.js';
+import createEncounterLink from './createEncounterLink.js';
+import createCompletedEncounter from './createCompletedEncounter.js';
+import hasCompletedAll from './hasCompletedAll';
+import isFlat from './isFlat';
+
 // get user data from local storage - CHECK
 // show user data in stats box
 
@@ -17,18 +23,7 @@ const parsedBandObject = JSON.parse(localStorage.getItem('Band Stats'));
 console.log(parsedBandObject);
 
 
-function createEncounterLink(encounter) {
-    const link = document.createElement('a');
-    link.classList.add('pick');
+let link;
 
-    const getParams = new URLSearchParams();
-    getParams.set('id', encounter.id);
-    link.href = 'encounter?' + encounter.id;
-
-    link.href = '../encounter/?id=' + encounter.id;
-
-    link.style.top = encounter.map.top;
-    link.textContent = encounter.title;
-
-    return link;
-}
+const pickOne = document.getElementById('pick-one');
+pickOne.appendChild(link);
