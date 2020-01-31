@@ -1,19 +1,63 @@
-import { getBand } from "../makeSaveGetBand.js";
+import { getBand } from '../makeSaveGetBand.js';
 import { encounters } from '../data/encounters.js';
+import findById from '../utils/utils.js';
 
 getBand('Band Stats');
 
+// returns id as a string
 const params = new URLSearchParams(window.location.search);
-const currentEncounter = params.get('id');
+const encounterId = params.get('id');
+
+let currentEncounter = findById(encounters, encounterId);
+console.log(currentEncounter);
 
 function createEncounterPage(someEncounter) {
     const form = document.querySelector('form');
+    
+    const encounterImage = document.createElement('img');
+    encounterImage.src = currentEncounter.image;
+    form.appendChild(encounterImage);
 
     const fieldset = document.createElement('fieldset');
-    form.appendChild('fieldset');
+    form.appendChild(fieldset);
 
-    const legend = document.querySelector('legend');
+    const legend = document.createElement('legend');
     legend.textContent = someEncounter.description;
+    fieldset.appendChild(legend);
+
+    const radioOneLabel = document.createElement('label');
+    const radioTwoLabel = document.createElement('label');
+    const radioThreeLabel = document.createElement('label');
+    fieldset.append(radioOneLabel, radioTwoLabel, radioThreeLabel);
+
+    const radioOneSpan = document.createElement('span');
+    radioOneSpan.textContent = someEncounter.choices[0].description;
+    const radioOneInput = document.createElement('input');
+    radioOneInput.type = 'radio';
+    radioOneInput.name = 'choice';
+    radioOneInput.value = 'optionOne';
+    radioOneLabel.append(radioOneInput, radioOneSpan);
+
+    const radioTwoSpan = document.createElement('span');
+    radioTwoSpan.textContent = someEncounter.choices[1].description;
+    const radioTwoInput = document.createElement('input');
+    radioTwoInput.type = 'radio';
+    radioTwoInput.name = 'choice';
+    radioTwoInput.value = 'optionTwo';
+    radioTwoLabel.append(radioTwoInput, radioTwoSpan);
+
+    const radioThreeSpan = document.createElement('span');
+    radioThreeSpan.textContent = someEncounter.choices[2].description;
+    const radioThreeInput = document.createElement('input');
+    radioThreeInput.type = 'radio';
+    radioThreeInput.name = 'choice';
+    radioThreeInput.value = 'optionThree';
+    radioThreeLabel.append(radioThreeInput, radioThreeSpan);
+
+    const button = document.createElement('button');
+    button.textContent = 'Guitar!';
+    button.type = 'radio';
+    form.appendChild(button);
 }
 
 createEncounterPage(currentEncounter);

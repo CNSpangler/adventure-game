@@ -3,8 +3,8 @@ export default function createEncounterLink(someEncounter) {
     
     const getParams = new URLSearchParams();
     getParams.set('id', someEncounter.id);
-    aTag.href = 'encounter?' + getParams.toString();
-    aTag.href = '../encounter/?id=' + someEncounter.id;
+    // aTag.href = 'encounter?' + getParams.toString();
+    aTag.href = '../encounter-page/?id=' + someEncounter.id;
     
     const icon = document.createElement('img');
     icon.classList.add('pick');
