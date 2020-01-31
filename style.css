@@ -1,0 +1,35 @@
+Header {
+    background-color: #F8007A;
+    max-height: 10%;
+    border: solid 3px black;
+    border-radius: 15px;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+body {
+    background-image: url('./assets/lightning-bg.jpg');
+    background-size: cover;
+    height: 100%;
+}
+
+#instructions {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    background-color: #F8007A;
+    width: 85%;
+    border: solid 3px black;
+    border-radius: 15px;
+    padding: 10px;
+    margin: auto;
+}
+
+input {
+    margin-top: 7px;
+}
+
+button {
+    margin-top: 7px;
+}
