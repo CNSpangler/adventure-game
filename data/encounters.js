@@ -1,13 +1,9 @@
-export function saveBand(someBand) {
-    const stringyBand = JSON.stringify(someBand);
-    localStorage.setItem('Band Stats', stringyBand);
-}
-
 const crue = {
     id: 'crue',
     title: 'A Mötley Crüe!',
     map: { top: '19%' },
-    image: './assets/defleppard.jpg',
+    image: '../assets/defleppard.jpg',
+    icon: '../assets/transparent-pick-pink.png',
     // audio: '',
     // action: '',
     description: `Oh no, a Mötley Crüe bursts out of the forest! Their leader tells you “Handful of grease in my hair feels right, but what I need to get me tight are those…” What do you offer them?`,
@@ -36,7 +32,9 @@ const scorpions = {
     id: 'scorpions',
     title: 'SCORPIONS!',
     map: { top: '26%' },
-    image: './assets/scorpions.jpg',
+    image: '../assets/scorpions.jpg',
+    icon: '../assets/transparent-pick-green.png',
+
     // audio: '',
     // action: '',
     description: `Scorpion appears and declares “Here I am.” How do you respond?`,
@@ -65,7 +63,9 @@ const halfway = {
     id: 'halfway',
     title: 'Halfway There!',
     map: { top: '33%' },
-    image: './assets/bonjovi.jpg',
+    image: '../assets/bonjovi.jpg',
+    icon: '../assets/transparent-pick-orange.png',
+
     // audio: '',
     // action: '',
     description: `Whoa! We're halfway there! Whoa:`,
@@ -94,7 +94,8 @@ const leppard = {
     id: 'leppard',
     title: 'A wild leppard!',
     map: { top: '40%' },
-    image: './assets/defleppard.jpg',
+    image: '../assets/defleppard.jpg',
+    icon: '../assets/transparent-pick-teal.png',
     // audio: '',
     // action: '',
     description: `A Def Leppard approaches, speaking in riddles: “I’m hot, sticky sweet, from my head to my feet.” What is your answer?`,
@@ -123,7 +124,8 @@ const bonjovi = {
     id: 'bonjovi',
     title: 'By Jove!',
     map: { top: '47%' },
-    image: './assets/bonjovi.jpg',
+    image: '../assets/bonjovi.jpg',
+    icon: '../assets/transparent-pick-yellow.png',
     // audio: '',
     // action: '',
     description: `Oh no, you rocked too hard and a guitar string went flying. Bon Jovi has been shot through the heart, and you’re to blame!`,
@@ -148,10 +150,10 @@ const bonjovi = {
     }],
 };
 
-export const encounters = {
+export const encounters = [
     crue,
     scorpions,
     halfway,
     leppard,
     bonjovi
-};
+];

@@ -1,5 +1,27 @@
-// Hard code a section/div/form/button (maybe a fieldset instead of section? make use of legend?)
-// Hard code a buttion inside the form
+import { getBand } from "../makeSaveGetBand.js";
+import { encounters } from '../data/encounters.js';
+
+getBand('Band Stats');
+
+const params = new URLSearchParams(window.location.search);
+const currentEncounter = params.get('id');
+
+function createEncounterPage(someEncounter) {
+    const form = document.querySelector('form');
+
+    const fieldset = document.createElement('fieldset');
+    form.appendChild('fieldset');
+
+    const legend = document.querySelector('legend');
+    legend.textContent = someEncounter.description;
+}
+
+createEncounterPage(currentEncounter);
+
+
+
+
+
 // get the data
 // get the data for the correct question using queryParam and findById
     // put the encounter description in the div
