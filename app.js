@@ -1,5 +1,6 @@
 import makeBand from './make-band.js';
 import { saveBand } from './data/encounters.js';
+import createEncounterLink from './guitar-map/createEncounterLink.js';
 
 // Header with game name - CHECK
 // Instructions/overview of game - CHECK

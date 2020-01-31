@@ -27,3 +27,21 @@ let link;
 
 const pickOne = document.getElementById('pick-one');
 pickOne.appendChild(link);
+
+
+// check localStorage to see what questions have been completed
+// if there are no questions left to answer...
+    // redirect to results page
+// if there are any questions left to answer...
+// get a pick location from DOM
+// loop through the REMAINING encounters array
+    //get a single encounter
+    // make a div for the encounter
+        //create div(?)
+        // add textContent to it
+        // make an a tag for it 
+        // UNLESS it has already been completed (check localStorage); if so, make a span (why?)
+            // add the href to the a tag with query params for the question
+
+    // createEncounterLink(); feed it that same single encounter?
+    // take the resulting link (will be in the form of an <a>) and append it to the appropriate guitar pick 

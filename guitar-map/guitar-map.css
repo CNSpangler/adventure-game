@@ -23,9 +23,13 @@ section {
 }
  */
 .pick {
-    max-width: 10%;
+    max-width: 8%;
     position: absolute;
-    left: 44%;
+    left: 45%;
+}
+
+.pick:hover {
+    transform: scale(1.3);
 }
 
 #pick-one {
