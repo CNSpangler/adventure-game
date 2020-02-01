@@ -1,8 +1,8 @@
 import { encounters } from '../data/encounters.js';
 import createEncounterLink from './createEncounterLink.js';
 import createCompletedEncounter from './createCompletedEncounter.js';
-// import hasCompletedAll from './hasCompletedAll';
-// import isFlat from './isFlat.js';
+import hasCompletedAll from './hasCompletedAll.js';
+import isFlat from './isFlat.js';
 import { getBand } from '../makeSaveGetBand.js';
 
 // show user data in stats box
@@ -11,9 +11,9 @@ import { getBand } from '../makeSaveGetBand.js';
 
 const band = getBand();
 
-// if (isFlat(band) || hasCompletedAll(encounters, band)) {
-//     window.location('../results');
-// }
+if (isFlat(band) || hasCompletedAll(encounters, band)) {
+    window.location('../results');
+}
 
 const nav = document.getElementById('guitar');
 

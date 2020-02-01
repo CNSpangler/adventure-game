@@ -1,6 +1,9 @@
-import { encounters } from '../data/encounters.js';
-export default function hasCompletedAll(someBand) {
-    if (someBand.completed === encounters) {
-        return true;
-    } return false;
+export default function hasCompletedAll(encounters, someBand) {
+    for (let i = 0; i < encounters.length; i++) {
+        const encounter = encounters[i];
+        if (!someBand.completed[encounter.id]) {
+            return false;
+        }
+    }
+    return true;
 }
