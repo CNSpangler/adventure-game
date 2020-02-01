@@ -41,6 +41,3 @@ encounters.forEach(encounter => {
         // make an a tag for it 
         // UNLESS it has already been completed (check localStorage); if so, make a span (why?)
             // add the href to the a tag with query params for the question
-
-    // createEncounterLink(); feed it that same single encounter?
-    // take the resulting link (will be in the form of an <a>) and append it to the appropriate guitar pick 

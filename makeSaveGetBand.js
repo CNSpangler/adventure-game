@@ -3,7 +3,7 @@ export function makeBand(someData) {
         name: someData.get('name'),
         hp: 3,
         pc: 0,
-        completed: {}
+        completed: []
     };
     return band;
 }
