@@ -1,14 +1,18 @@
 export default function createEncounterLink(someEncounter) {
-    const link = document.createElement('a');
-    link.classList.add('pick');
-
+    const aTag = document.createElement('a');
+    
     const getParams = new URLSearchParams();
     getParams.set('id', someEncounter.id);
-    link.href = 'encounter?' + getParams.toString();
-    link.href = '../encounter/?id=' + someEncounter.id;
+    // aTag.href = 'encounter?' + getParams.toString();
+    aTag.href = '../encounter-page/?id=' + someEncounter.id;
+    
+    const icon = document.createElement('img');
+    icon.classList.add('pick');
 
-    link.style.top = someEncounter.map.top;
-    link.textContent = someEncounter.title;
+    icon.style.top = someEncounter.map.top;
+    icon.src = someEncounter.icon;
 
-    return link;
+    aTag.appendChild(icon);
+
+    return aTag;
 }
