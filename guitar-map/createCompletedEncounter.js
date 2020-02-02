@@ -3,7 +3,7 @@ export default function createCompletedEncounter(someEncounter) {
     icon.classList.add('pick');
 
     icon.style.top = someEncounter.map.top;
-    icon.src = '../assets.transparent-pick-black';
+    icon.src = '../assets/transparent-pick-black.png';
 
     return icon;
 }

@@ -1,0 +1,36 @@
+#user-stats {
+    display: flex;
+    flex-direction: column;
+    border: solid 3px black;
+    border-radius: 15px;
+    background-color: #F8007A;
+    padding: 5px;
+    font-weight: bolder;
+}
+
+Header {
+    background-color: #F8007A;
+    max-height: 10%;
+    border: solid 3px black;
+    border-radius: 15px;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+body {
+    background-image: url('../assets/lightning-bg.jpg');
+    background-size: cover;
+    height: 100%;
+}
+
+button {
+    margin-top: 7px;
+    border-radius: 15px;
+    padding: 5px;
+    font-weight: bolder;
+}
+
+button:hover {
+    transform: scale(1.3);
+}

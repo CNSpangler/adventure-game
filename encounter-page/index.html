@@ -9,9 +9,18 @@
     <title>Get ready!</title>
 </head>
 <body>
-    <form>
+    <audio id="audio" autoplay></audio>
+    <form id="choices">
         <!-- dynamically rendered stuff goes inside -->
     </form>
+    <div id="user-stats" class="hidden">
+        <span id="band-name"></span>
+        <span id="hair-points"></span>
+        <span id="power-chords"></span>
+    </div>
+
+    <div id="result" class="hidden"></div>
+    <a href="../guitar-map/index.html" class="hidden">Continue your quest!</a>
     <script type="module" src="encounter-page.js"></script>
 </body>
 </html>

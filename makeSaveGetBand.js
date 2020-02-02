@@ -16,6 +16,6 @@ export function saveBand(someBand) {
 export function getBand() {
     const stringyBand = localStorage.getItem('Band Stats');
     if (!stringyBand) return null;
-    const parsedBand = JSON.parse(stringyBand);
-    return parsedBand;
+    const band = JSON.parse(stringyBand);
+    return band;
 }

@@ -1,0 +1,38 @@
+.hidden {
+    display: none;
+}
+
+#audio {
+    
+}
+
+form, a {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+    font-weight: bolder;
+}
+
+img {
+    max-width: 85%;
+    box-shadow: lawngreen 5px 10px;
+    margin: 0 auto 25px auto;
+}
+
+legend, #result {
+    border: dashed 3px aqua;
+    padding: 5px;
+    background-color: black;
+    color: white;
+    font-weight: bolder;
+}
+
+span {
+    margin: 5px;
+}
+
+#choices {
+    margin-top: 20px;
+}
+
