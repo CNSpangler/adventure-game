@@ -4,6 +4,6 @@ export default function renderUserData(someBand) {
     const powerChords = document.getElementById('power-chords');
 
     bandName.textContent = 'Band Name: ' + someBand.name;
-    hairPoints.textContent = 'Hair Points:' + someBand.hp;
-    powerChords.textContent = 'Power Chords:' + someBand.pc;
+    hairPoints.textContent = 'Hair Points: ' + someBand.hp;
+    powerChords.textContent = 'Power Chords: ' + someBand.pc;
 }

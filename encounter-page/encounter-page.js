@@ -3,6 +3,7 @@ import createEncounterPage from './createEncounterPage.js';
 import { encounters } from '../data/encounters.js';
 import findById from '../utils/utils.js';
 import encounterResult from './encounterResult.js';
+import renderUserData from '../common/render-user-data.js';
 
 const params = new URLSearchParams(window.location.search);
 const encounterId = params.get('id');
@@ -15,6 +16,7 @@ if (!currentEncounter) {
 const form = document.getElementById('choices');
 const result = document.getElementById('result');
 const returnLink = document.querySelector('a');
+const bandStats = document.getElementById('user-stats');
     
 createEncounterPage(currentEncounter);
     
@@ -35,5 +37,8 @@ form.addEventListener('submit', function(event) {
     form.classList.add('hidden');
     result.classList.remove('hidden');
     returnLink.classList.remove('hidden');
+    bandStats.classList.remove('hidden');
     result.textContent = userChoice.result;
+
+    renderUserData(band);
 });

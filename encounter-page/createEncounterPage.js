@@ -13,6 +13,9 @@ function createChoice(choice) {
     description.textContent = choice.description;
     label.appendChild(description);
 
+    const br = document.createElement('br');
+    label.appendChild(br);
+
     return label;
 }
 

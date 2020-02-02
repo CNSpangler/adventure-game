@@ -1,7 +1,10 @@
-import getBand from '../makeSaveGetBand.js';
+import { getBand } from '../makeSaveGetBand.js';
+import renderUserData from '../common/render-user-data.js';
 
-const band = getBand;
+const band = getBand();
 const resultsText = document.getElementById('results');
+
+renderUserData(band);
 
 if (band.hp === 0) {
     resultsText.textContent = `Oh no! Your hair went flat and now you are totally lame. We appreciate your effort, but you should probably go get a fresh can of Aquanet and try again later.`;
