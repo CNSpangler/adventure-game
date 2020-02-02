@@ -5,6 +5,7 @@ const crue = {
     image: '../assets/defleppard.jpg',
     icon: '../assets/transparent-pick-pink.png',
     audio: '../assets/crue.wav',
+    action: '../assets/crue-lyrics.wav',
     description: `Oh no, a Mötley Crüe bursts out of the forest! Their leader tells you “Handful of grease in my hair feels right, but what I need to get me tight are those…” What do you offer them?`,
     choices: [{
         id: 'girls',
@@ -34,9 +35,9 @@ const scorpions = {
     image: '../assets/scorpions.jpg',
     icon: '../assets/transparent-pick-green.png',
 
-    // audio: '',
-    // action: '',
-    description: `Scorpion appears and declares “Here I am.” How do you respond?`,
+    audio: '../assets/scorpions.wav',
+    action: '../assets/scorpions-lyrics.wav',
+    description: `Scorpions appear and declare “Here I am.” How do you respond?`,
     choices: [{
         id: 'rock',
         description: `"Rock you like a hurricane."`,
@@ -65,8 +66,8 @@ const halfway = {
     image: '../assets/bonjovi.jpg',
     icon: '../assets/transparent-pick-orange.png',
 
-    // audio: '',
-    // action: '',
+    audio: '../assets/prayer-open.wav',
+    action: '../assets/prayer-lyrics.wav',
     description: `Whoa! We're halfway there! Whoa:`,
     choices: [{
         id: 'bear',
@@ -95,8 +96,8 @@ const leppard = {
     map: { top: '40%' },
     image: '../assets/defleppard.jpg',
     icon: '../assets/transparent-pick-teal.png',
-    // audio: '',
-    // action: '',
+    audio: '../assets/sugar.wav',
+    action: '../assets/sugar-lyrics.wav',
     description: `A Def Leppard approaches, speaking in riddles: “I’m hot, sticky sweet, from my head to my feet.” What is your answer?`,
     choices: [{
         id: 'yes',
@@ -125,8 +126,8 @@ const bonjovi = {
     map: { top: '47%' },
     image: '../assets/bonjovi.jpg',
     icon: '../assets/transparent-pick-yellow.png',
-    // audio: '',
-    // action: '',
+    audio: '../assets/jovi-shot.wav',
+    action: '../assets/jovi-blame.wav',
     description: `Oh no, you rocked too hard and a guitar string went flying. Bon Jovi has been shot through the heart, and you’re to blame!`,
     choices: [{
         id: 'blockchain',
