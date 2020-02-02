@@ -4,8 +4,7 @@ const crue = {
     map: { top: '19%' },
     image: '../assets/defleppard.jpg',
     icon: '../assets/transparent-pick-pink.png',
-    // audio: '',
-    // action: '',
+    audio: '../assets/crue.wav',
     description: `Oh no, a Mötley Crüe bursts out of the forest! Their leader tells you “Handful of grease in my hair feels right, but what I need to get me tight are those…” What do you offer them?`,
     choices: [{
         id: 'girls',

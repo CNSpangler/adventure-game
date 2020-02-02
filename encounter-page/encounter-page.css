@@ -2,6 +2,10 @@
     display: none;
 }
 
+#audio {
+    
+}
+
 form, a {
     display: flex;
     flex-direction: column;

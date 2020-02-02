@@ -14,11 +14,13 @@ if (!currentEncounter) {
 }
 
 const form = document.getElementById('choices');
+const audio = document.getElementsByTagName('audio');
 const result = document.getElementById('result');
 const returnLink = document.querySelector('a');
 const bandStats = document.getElementById('user-stats');
     
 createEncounterPage(currentEncounter);
+audio.src = currentEncounter.audio;
     
 form.addEventListener('submit', function(event) {
     event.preventDefault();
