@@ -12,32 +12,19 @@ import { getBand } from '../makeSaveGetBand.js';
 const band = getBand();
 
 if (isFlat(band) || hasCompletedAll(encounters, band)) {
-    window.location('../results');
+    window.location = '../results';
 }
 
 const nav = document.getElementById('guitar');
 
-encounters.forEach(encounter => {
-    let encounterOption = null;
-    if (band.completed[encounter.id]) {
-        encounterOption = createCompletedEncounter(encounter);
-    } else {
-        encounterOption = createEncounterLink(encounter);
-    }
-    nav.appendChild(encounterOption);
-});
+for (let i = 0; i < encounters.length; i++) {
+    const encounter = encounters[i];
+    let encounterDisplay = null;
 
-// check localStorage to see what questions have been completed
-    // first, make completed events go into an array that you can check
-// if there are no questions left to answer...
-    // redirect to results page
-// if there are any questions left to answer...
-// get a pick location from DOM
-// loop through the REMAINING encounters array
-    //get a single encounter
-    // make a div for the encounter
-        //create div(?)
-        // add textContent to it
-        // make an a tag for it 
-        // UNLESS it has already been completed (check localStorage); if so, make a span (why?)
-            // add the href to the a tag with query params for the question
+    if (band.completed[encounter.id]) {
+        encounterDisplay = createCompletedEncounter(encounter);
+    } else {
+        encounterDisplay = createEncounterLink(encounter);
+    }
+    nav.appendChild(encounterDisplay);
+}

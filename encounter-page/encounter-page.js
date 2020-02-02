@@ -27,8 +27,9 @@ form.addEventListener('submit', function(event) {
     const userChoice = findById(currentEncounter.choices, userChecked);
         
     const band = getBand('Band Stats');
+    console.log(band);
 
-    encounterResult(userChoice, currentEncounter, band);
+    encounterResult(userChoice, currentEncounter.id, band);
     saveBand(band);
 
     form.classList.add('hidden');
