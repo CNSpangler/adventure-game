@@ -14,7 +14,7 @@ if (!currentEncounter) {
 }
 
 const form = document.getElementById('choices');
-const audio = document.getElementsByTagName('audio');
+const audio = document.getElementById('audio');
 const result = document.getElementById('result');
 const returnLink = document.querySelector('a');
 const bandStats = document.getElementById('user-stats');
@@ -36,6 +36,7 @@ form.addEventListener('submit', function(event) {
     encounterResult(userChoice, currentEncounter.id, band);
     saveBand(band);
 
+    audio.src = currentEncounter.action;
     form.classList.add('hidden');
     result.classList.remove('hidden');
     returnLink.classList.remove('hidden');
