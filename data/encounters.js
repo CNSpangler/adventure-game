@@ -37,7 +37,7 @@ const scorpions = {
 
     audio: '../assets/scorpions.wav',
     action: '../assets/scorpions-lyrics.wav',
-    description: `Scorpion appears and declares “Here I am.” How do you respond?`,
+    description: `Scorpions appear and declare “Here I am.” How do you respond?`,
     choices: [{
         id: 'rock',
         description: `"Rock you like a hurricane."`,
