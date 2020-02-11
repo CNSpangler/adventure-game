@@ -13,5 +13,5 @@ form.addEventListener('submit', (event) => {
 
     saveBand(band);
 
-    window.location = './guitar-map/index.html';
+    window.location = 'guitar-map/index.html';
 });
